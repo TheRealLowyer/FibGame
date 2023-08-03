@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eda-VR-FBS">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_2048" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng3-Kq-xkw">
+                                <rect key="frame" x="157.66666666666666" y="411" width="78" height="30"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="9xv-w3-DxO" eventType="touchUpInside" id="Axy-07-ULT"/>
+                                    <action selector="startGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Svv-I7-WP7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ng3-Kq-xkw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LS-wc-aWw"/>
+                            <constraint firstItem="Ng3-Kq-xkw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J3L-8R-oCZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="9xv-w3-DxO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="215"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="gFc-QE-P0f">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BmB-CS-rne" sceneMemberID="firstResponder"/>
+                <viewController id="eda-VR-FBS" customClass="ScoreViewController" customModule="swift_2048" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMS-fl-dQB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wc7-nu-LIz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O1f-63-cOh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzy-Vd-Yiq">
+                                <rect key="frame" x="116" y="483.33333333333331" width="143" height="54.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54.329999999999998" id="APd-Lz-Y39"/>
+                                    <constraint firstAttribute="width" constant="135" id="aum-pY-BN0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="glr-uZ-byg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54.329999999999998" id="o80-PE-vDr"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="tinted" image="puzzlepiece.extension.fill" catalog="system" title="Normal" imagePadding="10" titleAlignment="center">
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startGameButtonTapped:" destination="eda-VR-FBS" eventType="touchUpInside" id="tZd-c9-vBp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-ct-0FN">
+                                <rect key="frame" x="116" y="241" width="143" height="54.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54.329999999999998" id="V5R-4r-NoT"/>
+                                    <constraint firstAttribute="width" constant="143" id="gvu-JW-oI6"/>
+                                </constraints>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="tinted" image="trophy.fill" catalog="system" title="Challange" imagePadding="10" titleAlignment="center">
+                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="challangeButtonTapped:" destination="eda-VR-FBS" eventType="touchUpInside" id="ntY-oa-wPn"/>
+                                    <action selector="startGameButtonTapped:" destination="eda-VR-FBS" eventType="touchUpInside" id="Ybl-ie-cmX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="EJl-ct-0FN" firstAttribute="leading" secondItem="O1f-63-cOh" secondAttribute="leadingMargin" constant="100" id="7py-Az-bgj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EJl-ct-0FN" secondAttribute="trailing" constant="100" id="KsE-Vr-xAQ"/>
+                            <constraint firstItem="jzy-Vd-Yiq" firstAttribute="top" secondItem="EJl-ct-0FN" secondAttribute="bottom" constant="150" id="Ntp-dZ-0rO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jzy-Vd-Yiq" secondAttribute="trailing" constant="100" id="ad5-m3-AiG"/>
+                            <constraint firstItem="EJl-ct-0FN" firstAttribute="top" secondItem="aMS-fl-dQB" secondAttribute="bottom" constant="220" id="eUk-n5-39c"/>
+                            <constraint firstItem="jzy-Vd-Yiq" firstAttribute="leading" secondItem="O1f-63-cOh" secondAttribute="leadingMargin" constant="100" id="jos-yR-ehC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="challangeButton" destination="EJl-ct-0FN" id="mme-S9-G4J"/>
+                        <outlet property="normalButton" destination="EJl-ct-0FN" id="Ttt-zW-4rN"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1133.5877862595419" y="293.66197183098592"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="puzzlepiece.extension.fill" catalog="system" width="128" height="100"/>
+        <image name="trophy.fill" catalog="system" width="128" height="128"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
